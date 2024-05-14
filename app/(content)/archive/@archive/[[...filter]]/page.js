@@ -1,3 +1,5 @@
+import React, { Suspense } from "react";
+
 import NewsList from "@/components/news-list";
 import {
   getAvailableNewsMonths,
@@ -6,7 +8,6 @@ import {
   getNewsForYearAndMonth,
 } from "@/lib/news";
 import Link from "next/link";
-import React, { Suspense } from "react";
 
 async function FilterHeader({ year, month }) {
   let links = await getAvailableNewsYears();
